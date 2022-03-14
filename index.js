@@ -26,18 +26,20 @@ console.log("------------------------------------");
 
 const s1 = "mike Pukuotukas";
 const s2 = "Chuck Norris";
-const s3 = "Wonder womaN";
+const s3 = "Wonder WomaN";
 const s4 = "Algimantas cekuolis";
 
 // Rezultata pateikti tokiu sablonu
 // Legendines asmenybes [Vardas] [Pavarde] trumpinys yra [V.P.]
 
 let inicialai = (string) => {
-	const word = string.split(" ");
-	const vardas = word[0][0].toUpperCase();
-	const pavarde = word[1][0].toUpperCase();
+	const words = string.split(" ");
+	const vardas = words[0];
+	const init1 = vardas[0].toUpperCase();
+	const pavarde = words[1];
+	const init2 = pavarde[0].toUpperCase();
 	console.log(
-		`Legendines asmenybes ${word[0]} ${word[1]} trumpinys yra ${vardas}.${pavarde}.`
+		`Legendines asmenybes ${vardas} ${pavarde} trumpinys yra ${init1}.${init2}.`
 	);
 };
 
@@ -47,20 +49,18 @@ console.log("------------------------------------");
 
 // [Vardas] [Pavarde] yra [amzius] amziaus
 
-const jonas = {
-	name: "Jonas",
-	surname: "Jonaitis",
-	age: "99",
+const people = [
+	{ name: "Jonas", surname: "Jonaitis", age: "99" },
+	{ name: "Maryte", surname: "Marytaite", age: "87" },
+	{ name: "Jonas", surname: "Jonaitis", age: "99" },
+	{ name: "Maryte", surname: "Marytaite", age: "87" },
+	{ name: "Jonas", surname: "Jonaitis", age: "99" },
+	{ name: "Maryte", surname: "Marytaite", age: "87" },
+];
+let prisistatymas = (person) => {
+	console.log(`${person.name} ${person.surname} yra ${person.age} amziaus`);
 };
 
-const maryte = {
-	name: "Maryte",
-	surname: "Marytaite",
-	age: "87",
-};
-
-let prisistatymas = (obj) => {
-	console.log(`${obj.name} ${obj.surname} yra ${obj.age} amziaus`);
-};
-
-prisistatymas(maryte);
+for (const person of people) {
+	prisistatymas(person);
+}

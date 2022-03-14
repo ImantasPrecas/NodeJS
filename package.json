@@ -4,7 +4,9 @@
   "description": "Firs Node.js project",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon",
+    
+    "dev": "nodemon ./index.js",
+    "file": "nodemon ./files.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

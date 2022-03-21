@@ -25,3 +25,13 @@ const fs = require("fs/promises");
 		);
 	}
 })();
+
+const jonas = {
+	name: "Jonas",
+	lastname: "Jonaitis",
+	age: "99",
+	childrenCount: 3,
+	children: ["Lina", "Ona", "Liepa"],
+};
+
+console.log(jonas.children[2].name);
